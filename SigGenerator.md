@@ -22,7 +22,7 @@ permalink: /sig-generator/
 <button id="remove" style="display: inline-block;  margin: 0 10px 0 0;  padding: 15px 45px;  font-size: 14px;   line-height: 1;  appearance: none;  box-shadow: none;  border-radius: 0;">Remove Empty Phone #</button>
 
 <div>
-    <table border="0" style="widows: 1; margin-top: 20px; margin-left: 10px; margin-bottom: 20px; margin-right: 10px; min-width: 480px; max-width:1024;">
+    <table border="0" style="widows: 1; margin-top: 5px; margin-left: 10px; margin-bottom: 20px; margin-right: 10px; min-width: 480px; max-width:1024;">
       <tbody>
         <tr height="70">
           <td width="70">
