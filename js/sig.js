@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-	$("input, textarea").keyup(function() {
+	$("input, textarea").on('keyup change', function() {
 		$("#" + $(this).data("span")).text($(this).val());
 		$("#" + $(this).data("span") + "mail").attr("href","mailto:" + $(this).val());
 	})
