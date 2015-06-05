@@ -43,7 +43,7 @@ I started out at this company as a temporary break fix tech and worked my way in
       <td> Mirth Connect - interface engine </td>
     </tr>
     <tr>
-      <td> HipChat </td>
+      <td> Slack </td>
       <td> Skype </td>
       <td> Email (too many accounts!)</td>
     </tr>
