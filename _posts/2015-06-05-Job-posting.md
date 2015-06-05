@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: post
 title: Job Posting
+categories: job posting
 permalink: /job-posting/
 ---
 
