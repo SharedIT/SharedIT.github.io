@@ -7,7 +7,7 @@ permalink: /job-posting/
 
 ## What we are looking for ...
 
-We’re looking for someone to help create a new culture in our company. If you have ever wanted to work for a startup, but thought it was too risky, come work with us. We are a 15 year old IT/Development Company. We are looking to create an innovative/creative/culture rich side to our company. We will be createing innovative solutions to problems in our community.
+Shared IT, Inc. is looking for a programmer that enjoys working on meaningful projects and learning new things. We thrive on daily challenges and have an innovative and creative culture. Shared IT, Inc. is a 15 year old IT and Development Company that always has a wide range of projects in the pipeline. We create innovative solutions to problems in our community.
 
 ## Recommended Interests
 
@@ -16,6 +16,12 @@ To follow is a list if interest you should have to work well with the culture we
   * Programing
   * Agile Principles
   * Learning/Education
+
+## We are looking to expand our Shared Connect team
+
+Within Shared IT, Inc. we have a team working on projects that connect people and systems. One current project The Shared Connect Team is working on is connecting health practices, health systems, and individuals. You can get more information on the [Midwest health Exchange here.](http://midwesthealthexchange.com/){:target="_blank"}
+
+We are looking to expand the Shared Connect Team. Since we would both be on the team here is a little bit about my self.
 
 ## My culture
 
