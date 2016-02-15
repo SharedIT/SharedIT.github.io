@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Personal Excel Workbook
+permalink: /PersonalWorkbook/
 ---
 {::options parse_block_html="true" /}
 <div class="content-wrapper">
