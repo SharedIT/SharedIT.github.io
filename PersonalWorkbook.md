@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # How to Add a Macro to Personal Workbook
 
 ## Find Personal Workbook Location
