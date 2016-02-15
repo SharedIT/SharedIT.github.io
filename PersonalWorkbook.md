@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{::options parse_block_html="true" /}
+<div class="content-wrapper">
 # How to Add a Macro to Personal Workbook
 
 ## Find Personal Workbook Location
@@ -36,3 +38,4 @@ C:\Program Files\Microsoft Office\Office12\XLSTART\
 ```
 C:\Program Files\Microsoft Office\Office11\XLSTART\
 ```
+</div>
