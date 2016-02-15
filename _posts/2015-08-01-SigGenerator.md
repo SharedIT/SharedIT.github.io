@@ -4,9 +4,12 @@ title: Signature Generator
 permalink: /sig-generator/
 ---
 
-# Signature Generator
+<div class="sig-wrapper">
+<h1> Signature Generator </h1>
 
-## Fill out the boxes with your information. If you don't use some of the phone boxes you can click the button to remove them from the signature.
+<h2>Fill out the boxes with your information. If you don't use some of the phone boxes you can click the button to remove them from the signature.</h2>
+
+<div class="form-wrapper">
 <input id="png" type="radio" name="image" value="png" checked> png <input id="svg" type="radio" name="image" value="svg"> svg
 
 <input type="text" name="Name" id="name" placeholder="My Name" data-span="nameText" autofocus required>
@@ -20,6 +23,7 @@ permalink: /sig-generator/
 <textarea name="discliamer" id="disclaimer" placeholder="disclaimer" data-span="disclaimerText" rows="4" style="width:100%;"></textarea>
 
 <button id="remove" style="display: inline-block;  margin: 0 10px 0 0;  padding: 15px 45px;  font-size: 14px;   line-height: 1;  appearance: none;  box-shadow: none;  border-radius: 0;">Remove Empty Phone #</button>
+</div>
 
 <div>
     <table border="0" style="widows: 1; margin-top: 5px; margin-left: 10px; margin-bottom: 20px; margin-right: 10px; min-width: 480px; max-width:1024;">
@@ -96,4 +100,5 @@ permalink: /sig-generator/
   </td>
   </tr>
 </table>
+</div>
 </div>
