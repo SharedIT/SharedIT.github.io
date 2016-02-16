@@ -12,6 +12,9 @@ tags: hide
 ***
 
 # Video How-to
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vr-Myz78bLc" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ***
 
