@@ -2,24 +2,28 @@
 layout: default
 ---
 <div class="template">
-<div class="page-home">
-
-
-  <section>
-    <h1>This is a repostitory for public pages for <a href="http://www.sharedit.com">Shared IT, Inc.</a></h1>
-    <h2>Avalible Pages:</h2>
-  </section>
-  <ul>
-    {% for post in site.posts %}
+  <div class="page-home">
     <section>
-      <li>
-        <h3>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h3>
-      </li>
+      <h1>This is a repostitory for public pages for <a href="http://www.sharedit.com">Shared IT, Inc.</a></h1>
+      <h2>Avalible Pages:</h2>
     </section>
-    {% endfor %}
-  </ul>
+    <ul>
+      {% for post in site.posts %}
 
-</div>
+      {% if post.tags contains 'hide' %}
+
+      {% else %}
+      <section>
+        <li>
+          <h3>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h3>
+        </li>
+      </section>
+      {% endif %}
+
+      {% endfor %}
+    </ul>
+
+  </div>
 </div>
