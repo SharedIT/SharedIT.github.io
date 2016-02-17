@@ -12,11 +12,14 @@ tags: hide
 ***
 
 # Video How-to
+
+***
+
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vr-Myz78bLc" frameborder="0" allowfullscreen></iframe>
 </div>
 
-***
+
 
 # Written Instructions
 
@@ -24,7 +27,7 @@ tags: hide
 
 ## Find Personal Workbook Location
 
-Find your personal Workbook Location if it Exists. Look in the following paths on your computer to see if you already have a PERSONAL>
+Find your personal Workbook Location if it Exists. Look in the following paths on your computer to see if you already have a PERSONAL.xlsb file.
 
 ### Possible Locations
 
@@ -38,7 +41,7 @@ C:\Users\{USER}\AppData\Roaming\Microsoft\Excel\XLSTART\PERSONAL.XLSB
 #### Windows XP
 
 ```
-C:\Documents and Settings\ApplicationData\Microsoft\Excel\XLSTART\PERSONAL.XLSB
+C:\Documents and Settings\{USER}\ApplicationData\Microsoft\Excel\XLSTART\PERSONAL.XLSB
 ```
 {: .smallCode}
 
@@ -65,11 +68,31 @@ C:\Program Files\Microsoft Office\Office11\XLSTART\
 ```
 {: .smallCode}
 
-## Open Personal Workbook and unhide it
+## Open/Add Personal Workbook
 
-Once you find *PERSONAL.XLSB* open the file
+If you don't have a *PERSONAL.XLSB* you will need to create one. To create a *PERSONAL.xlsb* you will need to record a new macro. To record a macro you will need to add the developer tab in Excel first.
+
+### Adding Developer Tab to Excel Ribbon
+
+Open up the options in Excel. Go to the Customize Ribbon in options and in the far box on the right, you will see an unchecked option for developer. Check this box to add the developer tab to excel.
+
+### Adding Macro to Personal Workbook
+
+In the Developer tab you will see recored a macro button. Click this button. In the window that pops up name the macro any name or choose the default. Then choose the "Store macro in" dropdown and choose Personal Workbook. You can then click ok. The record macro button has turned into a stop recording button. You can click this button to stop recording.
+
+### View Newly Created macro
+
+To the left of the "Record Macro" button is the "Visual Basic" button. Click this button to bring up the visual basic editor window. In the project pane you will see two projects, Book1 and PERSONAL.xls, you can expand the personal.xls project. Under modules you will see Module1, if you open this up you will see the new macro you have crated, and possibly any previous macros.
 
 ## Add Macro to Workbook
+
+### Remove Newly Created Macro
+
+With the module1 under your personal.xls project open, you can remove the macro you just created. The text between Sub {the name of the macro} to End Sub, inclusive. Leave any other macros that you didn't create.
+
+### Add new macros
+
+In place of the removed macro add the text below and hit the save button. This will create the new macros.
 
 ```
 Sub format_cornSheet_1()
@@ -302,10 +325,13 @@ End Sub
 ```
 {: .largeCode}
 
-## Hide Workbook
+## Add a Button to the Quick Access Toolbar
 
-## Create Button For New Macro
+Go to excel options and in the left column you will see a Quick Access Toolbar option. In the options you will open the "Choose commands from" dropdown. Choose macros from this dropdown. You will get a list of your newly created macros in your *PERSONAL.xlsb*. Choose the macros labeled "format_cornSheet_1" and click the "Add" button. Click Ok to close out the window. Your new macro should be setup now.
 
+## Test the new macro
+
+Close out of Excel and then open a new inspection from the inspectors link application. At the top of excel should be a new button. Click this button to format the inspection spreedsheet.
 
   </div>
 </div>
