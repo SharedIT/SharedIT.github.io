@@ -33,12 +33,14 @@ Find your personal Workbook Location if it Exists. Look in the following paths o
 ```
 C:\Users\{USER}\AppData\Roaming\Microsoft\Excel\XLSTART\PERSONAL.XLSB
 ```
+{: .smallCode}
 
 #### Windows XP
 
 ```
 C:\Documents and Settings\ApplicationData\Microsoft\Excel\XLSTART\PERSONAL.XLSB
 ```
+{: .smallCode}
 
 ### Additional Detail and Locations
 
@@ -47,18 +49,21 @@ C:\Documents and Settings\ApplicationData\Microsoft\Excel\XLSTART\PERSONAL.XLSB
 ```
 C:\Program Files\Microsoft Office\Office14\XLSTART\
 ```
+{: .smallCode}
 
 #### Excel 2007
 
 ```
 C:\Program Files\Microsoft Office\Office12\XLSTART\
 ```
+{: .smallCode}
 
 #### Excel 2003
 
 ```
 C:\Program Files\Microsoft Office\Office11\XLSTART\
 ```
+{: .smallCode}
 
 ## Open Personal Workbook and unhide it
 
@@ -294,9 +299,8 @@ Sub cells_to_timeAMPM()
     Selection.NumberFormat = "h:mm AM/PM"
 End Sub
 
-
-
 ```
+{: .largeCode}
 
 ## Hide Workbook
 
