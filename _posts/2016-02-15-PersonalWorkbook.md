@@ -168,7 +168,7 @@ ActiveSheet.Rows("1:300").RowHeight = 19
     Call cells_to_timeAMPM
 
 Range("A1").Select
-
+Range("X1:DD100").Delete
 ' save to desktop
 Dim location As String
 Dim a_date As String
