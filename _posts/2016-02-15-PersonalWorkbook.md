@@ -135,6 +135,10 @@ Sub format_cornSheet_1()
 ' format header borders
    Call format_headers
 
+' add border around containers
+
+   Call BorderContainer
+
 ' format detail header as bold
     Range("A5:S6").Select
     Selection.Font.Bold = True
@@ -167,6 +171,10 @@ ActiveSheet.Rows("1:300").RowHeight = 19
 ' format cells_to_timeAMPM
     Call cells_to_timeAMPM
 
+' change print orientation to landscape
+    Call LandscapeOrientation
+
+
 Range("A1").Select
 Range("X1:DD100").Delete
 ' save to desktop
@@ -177,7 +185,7 @@ a_date = Format(ActiveWorkbook.ActiveSheet.Range("H2").Value, "mm_dd_yyyy")
 ActiveWorkbook.SaveAs Environ("UserProfile") & "\Desktop\inspection_" & location & "_" & a_date & ".xlsx", FileFormat:=51
 
 ' turn on screen display
-    Application.ScreenUpdating = True
+Application.ScreenUpdating = True
 
 End Sub
 
@@ -321,6 +329,174 @@ Sub cells_to_timeAMPM()
     ActiveWorkbook.ActiveSheet.Range("B2:B3").Select
     Selection.NumberFormat = "h:mm AM/PM"
 End Sub
+
+Sub BorderContainer()
+
+    Dim i As Long, r As Range, coltoSearch As String
+
+    coltoSearch = "A"
+    coltoEnd = "L"
+
+    For i = 5 To Range(coltoSearch & Rows.Count).End(xlUp).Row
+        Set r = Range(coltoSearch & i)
+        If Len(r.Value) > 0 Then
+
+            Range(coltoSearch & i & ":" & coltoEnd & i).Select
+            Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+            Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+            With Selection.Borders(xlEdgeLeft)
+                .LineStyle = xlContinuous
+                .ColorIndex = xlAutomatic
+                .TintAndShade = 0
+                .Weight = xlThin
+            End With
+            With Selection.Borders(xlEdgeTop)
+                .LineStyle = xlContinuous
+                .ColorIndex = xlAutomatic
+                .TintAndShade = 0
+                .Weight = xlThin
+            End With
+            With Selection.Borders(xlEdgeBottom)
+                .LineStyle = xlContinuous
+                .ColorIndex = xlAutomatic
+                .TintAndShade = 0
+                .Weight = xlThin
+            End With
+            With Selection.Borders(xlEdgeRight)
+                .LineStyle = xlContinuous
+                .ColorIndex = xlAutomatic
+                .TintAndShade = 0
+                .Weight = xlThin
+            End With
+            With Selection.Borders(xlInsideVertical)
+                .LineStyle = xlContinuous
+                .ColorIndex = xlAutomatic
+                .TintAndShade = 0
+                .Weight = xlThin
+            End With
+            With Selection.Borders(xlInsideHorizontal)
+                .LineStyle = xlContinuous
+                .ColorIndex = xlAutomatic
+                .TintAndShade = 0
+                .Weight = xlThin
+            End With
+            Application.PrintCommunication = False
+            With ActiveSheet.PageSetup
+                .PrintTitleRows = ""
+                .PrintTitleColumns = ""
+            End With
+            Application.PrintCommunication = True
+            ActiveSheet.PageSetup.PrintArea = ""
+            Application.PrintCommunication = False
+            With ActiveSheet.PageSetup
+                .LeftHeader = ""
+                .CenterHeader = ""
+                .RightHeader = ""
+                .LeftFooter = ""
+                .CenterFooter = ""
+                .RightFooter = ""
+                .LeftMargin = Application.InchesToPoints(0.7)
+                .RightMargin = Application.InchesToPoints(0.7)
+                .TopMargin = Application.InchesToPoints(0.75)
+                .BottomMargin = Application.InchesToPoints(0.75)
+                .HeaderMargin = Application.InchesToPoints(0.3)
+                .FooterMargin = Application.InchesToPoints(0.3)
+                .PrintHeadings = False
+                .PrintGridlines = False
+                .PrintComments = xlPrintNoComments
+                .PrintQuality = 600
+                .CenterHorizontally = False
+                .CenterVertically = False
+                .Orientation = xlLandscape
+                .Draft = False
+                .PaperSize = xlPaperLetter
+                .FirstPageNumber = xlAutomatic
+                .Order = xlDownThenOver
+                .BlackAndWhite = False
+                .Zoom = 100
+                .PrintErrors = xlPrintErrorsDisplayed
+                .OddAndEvenPagesHeaderFooter = False
+                .DifferentFirstPageHeaderFooter = False
+                .ScaleWithDocHeaderFooter = True
+                .AlignMarginsHeaderFooter = True
+                .EvenPage.LeftHeader.Text = ""
+                .EvenPage.CenterHeader.Text = ""
+                .EvenPage.RightHeader.Text = ""
+                .EvenPage.LeftFooter.Text = ""
+                .EvenPage.CenterFooter.Text = ""
+                .EvenPage.RightFooter.Text = ""
+                .FirstPage.LeftHeader.Text = ""
+                .FirstPage.CenterHeader.Text = ""
+                .FirstPage.RightHeader.Text = ""
+                .FirstPage.LeftFooter.Text = ""
+                .FirstPage.CenterFooter.Text = ""
+                .FirstPage.RightFooter.Text = ""
+            End With
+        Else
+            Exit Sub
+        End If
+    Next i
+
+End Sub
+
+Sub LandscapeOrientation()
+
+    Application.PrintCommunication = False
+    With ActiveSheet.PageSetup
+        .PrintTitleRows = ""
+        .PrintTitleColumns = ""
+    End With
+    Application.PrintCommunication = True
+    ActiveSheet.PageSetup.PrintArea = ""
+    Application.PrintCommunication = False
+    With ActiveSheet.PageSetup
+        .LeftHeader = ""
+        .CenterHeader = ""
+        .RightHeader = ""
+        .LeftFooter = ""
+        .CenterFooter = ""
+        .RightFooter = ""
+        .LeftMargin = Application.InchesToPoints(0.7)
+        .RightMargin = Application.InchesToPoints(0.7)
+        .TopMargin = Application.InchesToPoints(0.75)
+        .BottomMargin = Application.InchesToPoints(0.75)
+        .HeaderMargin = Application.InchesToPoints(0.3)
+        .FooterMargin = Application.InchesToPoints(0.3)
+        .PrintHeadings = False
+        .PrintGridlines = False
+        .PrintComments = xlPrintSheetEnd
+        .PrintQuality = 600
+        .CenterHorizontally = False
+        .CenterVertically = False
+        .Orientation = xlLandscape
+        .Draft = False
+        .PaperSize = xlPaperLetter
+        .FirstPageNumber = xlAutomatic
+        .Order = xlDownThenOver
+        .BlackAndWhite = False
+        .Zoom = 100
+        .PrintErrors = xlPrintErrorsDisplayed
+        .OddAndEvenPagesHeaderFooter = False
+        .DifferentFirstPageHeaderFooter = False
+        .ScaleWithDocHeaderFooter = True
+        .AlignMarginsHeaderFooter = True
+        .EvenPage.LeftHeader.Text = ""
+        .EvenPage.CenterHeader.Text = ""
+        .EvenPage.RightHeader.Text = ""
+        .EvenPage.LeftFooter.Text = ""
+        .EvenPage.CenterFooter.Text = ""
+        .EvenPage.RightFooter.Text = ""
+        .FirstPage.LeftHeader.Text = ""
+        .FirstPage.CenterHeader.Text = ""
+        .FirstPage.RightHeader.Text = ""
+        .FirstPage.LeftFooter.Text = ""
+        .FirstPage.CenterFooter.Text = ""
+        .FirstPage.RightFooter.Text = ""
+    End With
+    Application.PrintCommunication = True
+End Sub
+
+
 
 ```
 {: .largeCode}
