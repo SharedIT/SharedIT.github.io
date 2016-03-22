@@ -1,2 +1,84 @@
+$sharedit-primary: #2AA7DF
+$sharedit-secondary: #F68920
+$sharedit-gray: #9F9F9F
+
+
 *
   box-sizing: border-box
+  color: $sharedit-gray
+
+
+nav.shared-nav
+  padding: 1rem 0
+  .logo-wrap
+    display: inline-block
+    .logo
+      display: inline-block
+      width: 6rem
+      height: 7rem
+      background-image: url('/assets/img/Shared_IT_LOGO_SQUARE.png')
+      background-size: cover
+      float: left
+  .nav-menu
+    float: right
+    padding: 3rem
+    .nav-item
+      text-transform: capitalize
+      padding: 0 1.5rem
+      text-decoration: none
+      color: $sharedit-gray
+    .nav-item:hover
+      color: $sharedit-primary
+
+
+section.sharedit-hero
+  text-align: center
+  background-color: $sharedit-primary
+  padding: 10rem
+  h1.sharedit-title, h2.sharedit-sub-title, .hero-cta
+    padding: 0 0 3rem
+    margin: 0
+    color: white
+  h1.sharedit-title
+
+  h2.sharedit-sub-title
+    padding-bottom: 4rem
+  .hero-cta
+    padding: 1rem 2rem
+    border: .4rem solid $sharedit-secondary
+    text-transform: capitalize
+    font-weight: 700
+    font-size: 2rem
+    border-radius: 1rem
+    display: inline-block
+    color: $sharedit-secondary
+
+
+section.sharedit-cio
+  text-align: center
+  padding-top: 4rem
+  .logo-wrap
+    display: inline-block
+    .logo
+      display: inline-block
+      width: 8rem
+      height: 11rem
+      background-image: url('/assets/img/Shared_IT_LOGO.png')
+      background-size: cover
+
+section.visit-us
+  text-align: center
+  width: 100%
+  .find-us
+    margin: 0
+    padding: 0 0 1rem
+  .sharedit-address
+    padding: 0 0 1rem
+  .sharedit-map
+    position: relative
+    width: 60%
+    margin: 0 auto
+    border-radius: 1rem
+    overflow: hidden
+    .google-map
+      width: 100%
