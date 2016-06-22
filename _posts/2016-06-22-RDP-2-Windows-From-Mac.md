@@ -27,5 +27,10 @@ Launch your CoRD application from the Application folder on your computer. Then 
 
 You should now be able to click the Saved Server name an launch the connection.
 
+If your having issues with it not connecting to certain newer servers, CoRD maybe using an older version of RDP protocol, so windows is not letting it connect on the older protocol. You have a couple of options.
+
+1. On the Server Allow older RDP Protocols.
+2. Try a different RDP client on Mac. I use xfreeRDP, but it is more difficult to setup. Let me know if you need help with this.
+
   </div>
 </div>
