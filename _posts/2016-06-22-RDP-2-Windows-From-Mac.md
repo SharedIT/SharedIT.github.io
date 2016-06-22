@@ -17,7 +17,7 @@ Download CoRD, a RDP client for Mac. [CoRD Site](http://cord.sourceforge.net/)
 
 Your download will be a zip file. Open the zip file and move the CoRD application into you application folder.
 
-![Add CoRD to Application Folder](/assets/img/CpCord.png)
+![Add CoRD to Application Folder](/assets/img/CpCoRD.png)
 
 ## Setup CoRD
 
